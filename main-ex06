@@ -1,0 +1,37 @@
+/*
+
+6. Faça uma função que recebe por parâmetro dois valores inteiros e positivos que serão a base 
+e o expoente. A função deve calcular e retornar o resultado da base elevado ao expoente 
+(potencia).
+
+*/
+
+#include <iostream>
+#include <locale.h>
+#include <cmath>
+using namespace std;
+
+
+int potencia(int n1, int n2){
+    int result = pow(n1, n2);
+    
+    return result;
+    
+}
+
+int main()
+{
+    int base, expoente;
+    
+    cout<<"Digite a base da potencia: \n";
+    cin >> base;
+    
+    cout<<"Digite o expoente da potencia: \n";
+    cin>>expoente;
+    cout<<"\n";
+    cout<<base<<" elevado a "<<expoente<<" é: "<<potencia(base, expoente);
+    
+    
+    
+    return 0;
+}
