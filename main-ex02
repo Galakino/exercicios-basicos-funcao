@@ -1,0 +1,37 @@
+/*
+
+2. Faça um procedimento que recebe um número inteiro por parâmetro e exibe uma mensagem 
+informando se o número é par ou ímpar. Saídas: 
+• Caso verdadeiro = “O número é par”; 
+• Caso falso = “O número é ímpar”. 
+
+*/
+
+#include <iostream>
+#include <locale.h>
+using namespace std;
+
+
+void leitura (int &number){
+    cout<<"Digite um numero: ";
+    cin>>number;
+}
+
+void parouimpar(int x){
+    if(x%2 == 0)
+        cout<<"Par";
+    else
+        cout<<"Impar";
+}
+
+int main()
+{
+    int number;
+    
+    leitura(number);
+    parouimpar(number);
+    
+    
+    
+    return 0;
+}
