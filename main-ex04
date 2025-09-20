@@ -1,0 +1,38 @@
+/*
+
+4. Faça um procedimento que recebe um número inteiro por parâmetro e exibe uma mensagem 
+indicando se ele é positivo, negativo ou zero. Saídas: 
+• Caso ele seja positivo = “Ele é positivo”; 
+• Caso ele seja negativo = “Ele é negativo”; 
+• Caso ele seja igual a zero = “Ele é igual a zero”. 
+
+*/
+
+#include <iostream>
+#include <locale.h>
+using namespace std;
+
+
+void leitura (int number){
+    if(number > 0){
+        cout<<"Positivo";
+        
+    }else if(number < 0){
+        cout<<"Negativo";
+        
+    }else{
+        cout<<"É zero";
+    }
+}
+
+int main()
+{
+    int number;
+    cout<<"Digite um número inteiro"<<endl;
+    cin>>number;
+    leitura(number);
+    
+    
+    
+    return 0;
+}
