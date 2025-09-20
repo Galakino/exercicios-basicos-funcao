@@ -1,0 +1,36 @@
+/*
+
+3. Faça uma função que receba como parâmetros a data de nascimento de uma pessoa e a data 
+atual e retorne a idade desta pessoa em anos (As datas devem ser recebidas em 3 variáveis 
+inteiras para ano, mês e dia).
+
+*/
+
+#include <iostream>
+#include <locale.h>
+using namespace std;
+
+
+int veridade (int diaAtual, int diaNasc, int mesAtual, int mesNasc, int anoAtual, int anoNasc){
+    
+    if(mesNasc < mesAtual || mesNasc == mesAtual && diaNasc <= diaAtual)
+        return anoAtual - anoNasc;
+    else 
+        return anoAtual - anoNasc - 1;
+}
+
+int main()
+{
+    int idade, diaNasc, diaAtual, mesAtual, mesNasc, anoAtual, anoNasc;
+    cout<<"Qual a sua data de nascimento? Escreva em formato 'DD MM AAAA'"<<endl;
+    cin>>diaNasc>>mesNasc>>anoNasc;
+    cout<<endl<<"Qual a data de hoje? Escreva em formato 'DD MM AAAA'"<<endl;
+    cin>>diaAtual>>mesAtual>>anoAtual;
+
+    cout<<"Sua idade é: "<<veridade (diaAtual, diaNasc, mesAtual, mesNasc, anoAtual, anoNasc);
+
+    
+    
+    
+    return 0;
+}
