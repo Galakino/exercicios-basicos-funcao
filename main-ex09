@@ -1,0 +1,30 @@
+/*
+
+9. Faça uma função que recebe um número inteiro por parâmetro, calcule e retorne o fatorial 
+deste número. 
+
+*/
+
+#include <iostream>
+using namespace std;
+
+int fatorial(int numero){
+    int result = 1;
+    
+    for(int i = 1; i<=numero; i++){
+        result *= i;
+    }
+    
+    return result;
+}
+
+int main()
+{
+    int n;
+    cout<<"Digite um numero: "<<"\n";
+    cin>>n;
+
+    cout<<"O fatorial deste número é: "<<fatorial(n);
+
+    return 0;
+}
