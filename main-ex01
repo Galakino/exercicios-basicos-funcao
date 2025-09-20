@@ -11,25 +11,30 @@ existir também um procedimento que faça a leitura.
 using namespace std;
 
 
-void leitura (int number){
-    if(number > 0){
-        cout<<"Positivo";
-        
-    }else if(number < 0){
-        cout<<"Negativo";
-        
-    }else{
-        cout<<"É zero";
+int valor (int n){
+    if(n < 0){
+        return 0;
+    } else {
+        return 1;
     }
+}
+
+void leitura (int &number){
+    cout<<"Digite um numero: ";
+    cin>>number;
 }
 
 int main()
 {
     int number;
-    cout<<"Digite um número inteiro"<<endl;
-    cin>>number;
+    
     leitura(number);
     
+    if(valor(number) == 1){
+        cout<<"Numero é positivo";
+    } else{
+        cout<<"Numero é  negativo";
+    }
     
     
     return 0;
